@@ -70,6 +70,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   if(fabs(dist_sqrt) < 0.0001){
 		cout << "UpdateEKF () - Error - Division by Zero" << endl;
 	} else {
+    // see radar-measurement.pdf for transform from x_ to radar measurement z.
     VectorXd z_pred = VectorXd(3);
     float arc = atan2(py, px);
     float rate = (px*vx + py*vy) / dist_sqrt;
