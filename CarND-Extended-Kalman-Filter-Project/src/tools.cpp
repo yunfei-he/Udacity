@@ -51,6 +51,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
   /**
   TODO:
     * Calculate a Jacobian here.
+	* see TaylorExpansion.pdf, Multivariant-TaylorExpansion and JacobianMatrix.pdf for details.
   */
  	MatrixXd Hj(3,4);
 	//recover state parameters
